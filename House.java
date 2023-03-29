@@ -39,18 +39,18 @@ public class House extends Building {
         System.out.println(name);
         this.residents.remove(name);
       } else {
-        throw new RuntimeException(name + "has already moves out!");
+        throw new RuntimeException(name + "has already moved out!");
       }
     }
 
     public boolean isResident(String person){
+      /* tells us whether or not a given person is a resident of the `House` */
       if (this.residents.contains(person)){
         return true;
       } else {
-        System.out.println("This resident does not live here!");
+        return false;
       }
-      /* a boolean method that tells us whether or not a given person is a resident of the `House` 
-      (for security reasons, we don't want to provide direct access to the entire list of residents */
+      
     }
 
   public String toString() {

@@ -12,7 +12,7 @@ public class Library extends Building {
       System.out.println("You have built a library: 📖");
     }
 
-  /* method to add title to collection and print what you added*/
+  /* method to add title to collection and print what you added */
   public void addTitle(String title){
     Boolean isavailable = collection.get(title);
     //if title is already in hashtable, throw runtime exception
@@ -46,6 +46,7 @@ public class Library extends Building {
     }
   }
 
+  /* method to return book */
   public void returnBook(String title){
     Boolean isavailable = collection.get(title);
     if(!isavailable){
@@ -55,7 +56,7 @@ public class Library extends Building {
     }
   }
 
-  // returns true if the title appears as a key in the Libary's collection, false otherwise
+  /* returns true if the title appears as a key in the Libary's collection, false otherwise */
   public boolean containsTitle(String title){
      if(collection.containsKey(title)){
       return true;
@@ -64,17 +65,17 @@ public class Library extends Building {
      }
   }
 
-// returns true if the title is currently available, false otherwise
+/* returns true if the title is currently available, false otherwise */
   public boolean isAvailable(String title){
     Boolean isavailable = collection.get(title);
-    if(isavailable = true){
+    if(isavailable){
       return true;
     } else {
       return false;
     }
   } 
   
-  // prints out the entire collection in an easy-to-read way (including checkout status)
+  /* prints out the entire collection in an easy-to-read way (including checkout status) */
   public void printCollection(){
     for(String key : collection.keySet()){
       Boolean value = collection.get(key);
